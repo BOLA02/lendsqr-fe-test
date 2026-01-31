@@ -9,8 +9,8 @@ import Use from '../assets/use.svg?react';
 
 import '../styles/Header.scss';
 
-import logo from '../assets/img/logo-login.png';
-import profileImg from '../assets/img/profile.png';
+import logo from '../assets/logo-login.png';
+import profileImg from '../assets/profile.png';
 
 interface HeaderProps {
   onMenuClick: () => void;

@@ -26,11 +26,11 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     <div className="login-container">
       <div className="login-left">
         <div className="logo">
-          <img src="../src/assets/logo-login.png" alt="logo" />
+          <img src="../assets/logo-login.png" alt="logo" />
         </div>
         
         <div className="illustration">
-          <img src="../src/assets/login-ui.png" alt="illustration" />
+          <img src="../assets/login-ui.png" alt="illustration" />
         </div>
       </div>
 
