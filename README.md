@@ -287,7 +287,7 @@ This project is part of the Lendsqr Frontend Engineer Assessment.
 
 **Your Name**
 - GitHub: [@BOLA02](https://github.com/BOLA02)
-- LinkedIn: [](https://linkedin.com/in/yourprofile)
+
 
 
 
