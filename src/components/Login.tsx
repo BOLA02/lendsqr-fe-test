@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import LoginLogo  from "../assets/logo-login.png";
+import LoginUi from "../assets/login-ui.png";
+
 import '../styles/Login.scss';
 
 interface LoginProps {
@@ -26,11 +29,11 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     <div className="login-container">
       <div className="login-left">
         <div className="logo">
-          <img src="../assets/logo-login.png" alt="logo" />
+          <img src={LoginLogo} alt="logo" />
         </div>
         
         <div className="illustration">
-          <img src="../assets/login-ui.png" alt="illustration" />
+          <img src={LoginUi} alt="" />
         </div>
       </div>
 
