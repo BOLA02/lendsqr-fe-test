@@ -3,7 +3,7 @@
 A modern, responsive user management dashboard built with React, TypeScript, and SCSS. This project demonstrates advanced filtering, pagination, data persistence, and responsive design principles.
 
 
-(![Login Page](image.png))
+![Login Page](image.png)
 ![Dashbaord](image-1.png)
 ![userdetail](image-2.png)
 
@@ -183,7 +183,7 @@ const handleStatusChange = (newStatus) => {
 };
 ```
 
-## 📱 Responsive Design
+##  Responsive Design
 
 ### Desktop (1024px+)
 - Fixed 1037px width for table
