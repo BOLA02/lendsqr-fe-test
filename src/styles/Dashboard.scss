@@ -1,0 +1,40 @@
+// Dashboard.scss
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F5F5F5;
+  font-family: 'Work Sans', 'Avenir Next', -apple-system, sans-serif;
+
+  .dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 283px;
+    padding-top: 70px;
+    width: calc(100% - 283px);
+
+    @media (max-width: 1024px) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  .dashboard-content {
+    padding: 40px 60px;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+
+  .page-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #213F7D;
+    margin-bottom: 40px;
+    margin-top: 60px;
+  }
+}

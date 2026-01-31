@@ -1,0 +1,262 @@
+// Sidebar.scss
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 283px;
+  height: calc(100vh - 70px);
+  background: #FFFFFF;
+  border-right: 1px solid #E4E4E4;
+  overflow-y: auto;
+  z-index: 90;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 1024px) {
+    transform: translateX(-100%);
+    top: 0;
+    height: 100vh;
+    z-index: 101;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+
+    &.sidebar-open {
+      transform: translateX(0);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 3px;
+
+    &:hover {
+      background: #A0A0A0;
+    }
+  }
+
+  .sidebar-content {
+    padding: 30px 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .organization-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 40px;
+    margin-top: 39px;
+    &:hover {
+      background-color: #F9FAFB;
+    }
+
+    .org-icon {
+      font-size: 16px;
+    }
+
+    .org-text {
+      flex: 1;
+      font-size: 16px;
+      color: #213F7D;
+    }
+
+    .org-arrow {
+      font-size: 12px;
+      color: #213F7D;
+    }
+  }
+
+  .dashboard-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    &:hover {
+      background-color: #F9FAFB;
+    }
+
+    .dashboard-icon {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 16px;
+      color: #213F7D;
+    }
+  }
+
+  .menu-section {
+    margin-bottom: 30px;
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: #545F7D;
+      padding: 0 30px;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 30px;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+
+        &:hover {
+          background-color: rgba(57, 205, 204, 0.05);
+          border-left: 3px solid #39CDCC;
+          padding-left: 27px;
+        }
+
+        &.active {
+          background-color: rgba(57, 205, 204, 0.1);
+          border-left: 3px solid #39CDCC;
+          padding-left: 27px;
+
+          .menu-label {
+            color: #213F7D;
+            font-weight: 500;
+          }
+
+          svg {
+            color: #39CDCC;
+          }
+        }
+
+        .menu-icon {
+          font-size: 16px;
+          width: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .menu-label {
+          font-size: 16px;
+          color: #213F7D;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  // Footer section
+  .sidebar-footer {
+    margin-top: auto;
+    padding: 20px 0;
+    border-top: 1px solid #E4E4E4;
+
+    .logout-container {
+      padding: 0 0 15px 0;
+    }
+
+    .logout-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 30px;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+
+      &:hover {
+        background-color: rgba(57, 205, 204, 0.05);
+        border-left: 3px solid #39CDCC;
+        padding-left: 27px;
+
+        .logout-text {
+          color: #213F7D;
+          font-weight: 500;
+        }
+
+        svg path {
+          stroke: #39CDCC;
+        }
+      }
+
+      &:active {
+        background-color: rgba(57, 205, 204, 0.1);
+        border-left: 3px solid #39CDCC;
+        padding-left: 27px;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        transition: all 0.2s;
+      }
+
+      .logout-text {
+        font-size: 16px;
+        color: #213F7D;
+        opacity: 0.8;
+        transition: all 0.2s;
+      }
+    }
+
+    .version-info {
+      padding: 0 30px;
+      font-size: 12px;
+      color: #213F7D;
+      opacity: 0.5;
+      margin-top: 5px;
+    }
+  }
+}
+
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 22px;
+
+  svg {
+    width: 18px;
+    height: 22px;
+  }
+}
+
+.menu-item.active svg {
+  color: #39cdcc;
+}
+
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
